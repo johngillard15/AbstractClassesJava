@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Vehicle {
-    public String name;
-    public String year;
-    public Engine engine;
+    public final String name;
+    public final String year;
+    public final Engine engine;
     private final List<String> passengers = new ArrayList<>();
-    private int maxPassengers;
+    private final int maxPassengers;
 
     public Vehicle(String name, String year, Engine engine){
         this.name = name;
@@ -18,6 +18,9 @@ public abstract class Vehicle {
     }
 
     public Vehicle(String name, String year, Engine engine, int maxPassengers){
+        this.name = name;
+        this.year = year;
+        this.engine = engine;
         this.maxPassengers = maxPassengers;
     }
 
